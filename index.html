@@ -1,0 +1,2045 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Verdana Grand Hotel &amp; Spa — Where Nature Meets Luxury | Shimla</title>
+  <meta name="description" content="Experience unparalleled 5-star luxury at Verdana Grand Hotel &amp; Spa in Shimla, Himachal Pradesh. Nestled in pine forests with world-class amenities, fine dining, and breathtaking Himalayan views." />
+  <meta name="keywords" content="Verdana Grand Hotel, luxury hotel Shimla, 5 star hotel Shimla, spa resort Shimla, Himachal Pradesh luxury stay, best hotel Shimla" />
+  <meta property="og:title" content="Verdana Grand Hotel &amp; Spa — Shimla" />
+  <meta property="og:description" content="Where Nature Meets Luxury. Experience 5-star opulence nestled in the heart of Shimla's pine forests." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://verdanagrand.com" />
+  <meta name="robots" content="index, follow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ============================================================
+       CSS VARIABLES & RESET
+    ============================================================ */
+    :root {
+      --charcoal: #1a1a1a;
+      --gold: #c9a84c;
+      --gold-light: #e8c97a;
+      --gold-dark: #a8852e;
+      --cream: #fdf8f0;
+      --forest: #2d5a27;
+      --forest-dark: #1d3d1a;
+      --forest-light: #3d7535;
+      --beige: #f5efe6;
+      --text-muted: #888;
+      --white: #ffffff;
+      --shadow: rgba(0,0,0,0.35);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      font-family: 'Jost', sans-serif;
+      background: var(--cream);
+      color: var(--charcoal);
+      overflow-x: hidden;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    button { cursor: pointer; border: none; background: none; font-family: inherit; }
+
+    /* ============================================================
+       UTILITY
+    ============================================================ */
+    .container {
+      width: min(1200px, 92%);
+      margin-inline: auto;
+    }
+
+    .section-label {
+      font-family: 'Jost', sans-serif;
+      font-weight: 500;
+      font-size: 0.75rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--gold);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .section-label::before,
+    .section-label::after {
+      content: '';
+      display: block;
+      height: 1px;
+      width: 40px;
+      background: var(--gold);
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.2;
+      color: var(--charcoal);
+    }
+
+    .gold-divider {
+      width: 60px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      margin: 16px auto;
+    }
+
+    /* Scroll reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+
+    /* ============================================================
+       NAVBAR
+    ============================================================ */
+    #navbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      padding: 22px 0;
+      transition: background 0.4s ease, padding 0.4s ease, box-shadow 0.4s ease;
+    }
+    #navbar.scrolled {
+      background: rgba(26, 26, 26, 0.97);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      padding: 14px 0;
+      box-shadow: 0 4px 30px rgba(0,0,0,0.4);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--gold);
+      letter-spacing: 0.08em;
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 36px;
+    }
+    .nav-links a {
+      font-family: 'Jost', sans-serif;
+      font-weight: 500;
+      font-size: 0.85rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--cream);
+      position: relative;
+      transition: color 0.3s;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px; left: 0;
+      width: 0; height: 1px;
+      background: var(--gold);
+      transition: width 0.3s;
+    }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-links a:hover::after { width: 100%; }
+
+    .btn-book {
+      font-family: 'Jost', sans-serif;
+      font-weight: 600;
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--charcoal);
+      background: var(--gold);
+      padding: 10px 22px;
+      border-radius: 2px;
+      transition: background 0.3s, transform 0.2s;
+    }
+    .btn-book:hover {
+      background: var(--gold-light);
+      transform: translateY(-1px);
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      padding: 4px;
+      cursor: pointer;
+    }
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--cream);
+      transition: transform 0.3s, opacity 0.3s;
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      gap: 0;
+      background: rgba(26,26,26,0.98);
+      border-top: 1px solid rgba(201,168,76,0.2);
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.4s ease;
+    }
+    .mobile-menu.open { max-height: 400px; }
+    .mobile-menu a {
+      font-family: 'Jost', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--cream);
+      padding: 16px 24px;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      transition: color 0.3s, background 0.3s;
+    }
+    .mobile-menu a:hover { color: var(--gold); background: rgba(201,168,76,0.05); }
+    .mobile-menu .btn-book {
+      margin: 16px 24px;
+      text-align: center;
+      display: block;
+    }
+
+    /* ============================================================
+       HERO
+    ============================================================ */
+    #hero {
+      position: relative;
+      height: 100vh;
+      min-height: 600px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background: linear-gradient(
+        160deg,
+        var(--forest-dark) 0%,
+        #0e2410 30%,
+        #000000 100%
+      );
+    }
+
+    /* Parallax texture layer */
+    #hero::before {
+      content: '';
+      position: absolute;
+      inset: -20%;
+      background:
+        radial-gradient(ellipse 80% 60% at 30% 40%, rgba(45,90,39,0.5) 0%, transparent 70%),
+        radial-gradient(ellipse 60% 80% at 70% 60%, rgba(14,36,16,0.7) 0%, transparent 70%);
+      will-change: transform;
+    }
+
+    /* Decorative pine silhouette */
+    #hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 40%;
+      background:
+        linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 100%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .hero-eyebrow {
+      font-family: 'Jost', sans-serif;
+      font-weight: 400;
+      font-size: 0.8rem;
+      letter-spacing: 0.5em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 20px;
+      opacity: 0;
+      animation: fadeUp 0.8s ease 0.2s forwards;
+    }
+
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: clamp(3rem, 8vw, 6.5rem);
+      line-height: 1.05;
+      color: var(--cream);
+      margin-bottom: 24px;
+      opacity: 0;
+      animation: fadeUp 0.9s ease 0.5s forwards;
+    }
+
+    .hero-subtitle {
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      color: rgba(253,248,240,0.75);
+      letter-spacing: 0.05em;
+      margin-bottom: 44px;
+      opacity: 0;
+      animation: fadeUp 0.9s ease 0.8s forwards;
+    }
+
+    .hero-buttons {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      opacity: 0;
+      animation: fadeUp 0.9s ease 1.1s forwards;
+    }
+
+    .btn-primary {
+      font-family: 'Jost', sans-serif;
+      font-weight: 600;
+      font-size: 0.85rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--charcoal);
+      background: var(--gold);
+      padding: 16px 36px;
+      border-radius: 2px;
+      transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+    }
+    .btn-primary:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(201,168,76,0.4);
+    }
+
+    .btn-outline {
+      font-family: 'Jost', sans-serif;
+      font-weight: 500;
+      font-size: 0.85rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--cream);
+      border: 1px solid rgba(253,248,240,0.5);
+      padding: 16px 36px;
+      border-radius: 2px;
+      transition: border-color 0.3s, color 0.3s, background 0.3s, transform 0.2s;
+    }
+    .btn-outline:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+      background: rgba(201,168,76,0.08);
+      transform: translateY(-2px);
+    }
+
+    .scroll-arrow {
+      position: absolute;
+      bottom: 36px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      opacity: 0;
+      animation: fadeIn 1s ease 1.6s forwards;
+    }
+    .scroll-arrow span {
+      display: block;
+      width: 20px;
+      height: 20px;
+      border-right: 2px solid var(--gold);
+      border-bottom: 2px solid var(--gold);
+      transform: rotate(45deg);
+      animation: bounce 1.5s ease infinite;
+    }
+    .scroll-arrow span:nth-child(2) { animation-delay: 0.15s; opacity: 0.6; }
+    .scroll-arrow span:nth-child(3) { animation-delay: 0.3s; opacity: 0.3; }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+    @keyframes bounce {
+      0%, 100% { transform: rotate(45deg) translateY(0); }
+      50% { transform: rotate(45deg) translateY(6px); }
+    }
+
+    /* ============================================================
+       ABOUT
+    ============================================================ */
+    #about {
+      padding: 120px 0;
+      background: var(--cream);
+      overflow: hidden;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.6fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .about-left {
+      position: relative;
+    }
+
+    .est-text {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(4rem, 10vw, 8rem);
+      font-weight: 700;
+      line-height: 1;
+      color: transparent;
+      -webkit-text-stroke: 2px var(--gold);
+      letter-spacing: -0.02em;
+      user-select: none;
+    }
+
+    .about-image-block {
+      margin-top: 20px;
+      position: relative;
+      padding: 24px;
+      background: linear-gradient(135deg, var(--forest-dark), var(--charcoal));
+      border-radius: 2px;
+    }
+    .about-image-block::before {
+      content: '';
+      position: absolute;
+      top: -8px; left: -8px;
+      right: 8px; bottom: 8px;
+      border: 1px solid var(--gold);
+      border-radius: 2px;
+      pointer-events: none;
+    }
+    .about-image-inner {
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .about-image-inner .big-icon {
+      font-size: 3.5rem;
+      margin-bottom: 12px;
+    }
+    .about-image-inner p {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      color: var(--gold-light);
+      font-size: 1rem;
+    }
+
+    .about-right .section-label { margin-bottom: 16px; }
+    .about-right .section-title { margin-bottom: 28px; }
+
+    .about-right p {
+      font-size: 1rem;
+      line-height: 1.9;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .about-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+      padding-top: 40px;
+      border-top: 1px solid rgba(201,168,76,0.25);
+    }
+
+    .stat-item {
+      text-align: center;
+    }
+    .stat-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--gold);
+      line-height: 1;
+    }
+    .stat-label {
+      font-family: 'Jost', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-top: 8px;
+    }
+
+    /* ============================================================
+       ROOMS
+    ============================================================ */
+    #rooms {
+      padding: 120px 0;
+      background: var(--beige);
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+    .section-header .section-label { justify-content: center; margin-bottom: 14px; }
+
+    .rooms-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .room-card {
+      background: linear-gradient(145deg, var(--forest-dark) 0%, #111 60%, var(--charcoal) 100%);
+      border-radius: 4px;
+      overflow: hidden;
+      border: 1px solid rgba(201,168,76,0.15);
+      transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+      position: relative;
+    }
+    .room-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 0 1px var(--gold), 0 0 30px rgba(201,168,76,0.2);
+      border-color: var(--gold);
+    }
+
+    .room-card-visual {
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .room-card-visual::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, transparent 40%, rgba(14,36,16,0.8) 100%);
+    }
+    .room-card:nth-child(1) .room-card-visual {
+      background: linear-gradient(135deg, #1a3d18, #0a200e, #121212);
+    }
+    .room-card:nth-child(2) .room-card-visual {
+      background: linear-gradient(135deg, #2d5a27, #1a3d18, #0d0d0d);
+    }
+    .room-card:nth-child(3) .room-card-visual {
+      background: linear-gradient(135deg, #3d7535, #2d5a27, #111);
+    }
+
+    .room-badge {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      background: var(--gold);
+      color: var(--charcoal);
+      font-family: 'Jost', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 2px;
+      z-index: 1;
+    }
+
+    .room-card-body {
+      padding: 28px;
+    }
+
+    .room-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      color: var(--cream);
+      margin-bottom: 8px;
+    }
+
+    .room-price {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      color: var(--gold);
+      font-weight: 700;
+    }
+    .room-price span {
+      font-family: 'Jost', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 400;
+      color: var(--text-muted);
+    }
+
+    .room-divider {
+      height: 1px;
+      background: linear-gradient(90deg, var(--gold), transparent);
+      margin: 20px 0;
+      opacity: 0.35;
+    }
+
+    .room-amenities {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 28px;
+    }
+    .room-amenity {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.8rem;
+      color: rgba(253,248,240,0.65);
+    }
+    .room-amenity .icon { font-size: 1rem; }
+
+    .btn-room {
+      display: block;
+      width: 100%;
+      font-family: 'Jost', sans-serif;
+      font-weight: 600;
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--charcoal);
+      background: var(--gold);
+      padding: 14px;
+      border-radius: 2px;
+      text-align: center;
+      transition: background 0.3s, box-shadow 0.3s;
+    }
+    .btn-room:hover {
+      background: var(--gold-light);
+      box-shadow: 0 4px 20px rgba(201,168,76,0.4);
+    }
+
+    /* ============================================================
+       AMENITIES
+    ============================================================ */
+    #amenities {
+      padding: 120px 0;
+      background: var(--charcoal);
+    }
+    #amenities .section-title { color: var(--cream); }
+
+    .amenities-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+      margin-top: 56px;
+    }
+
+    .amenity-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(201,168,76,0.12);
+      border-radius: 4px;
+      padding: 40px 28px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.4s, background 0.4s, transform 0.3s;
+    }
+    .amenity-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(201,168,76,0.06) 0%, transparent 60%);
+      opacity: 0;
+      transition: opacity 0.4s;
+    }
+    .amenity-card:hover {
+      border-color: rgba(201,168,76,0.5);
+      background: rgba(255,255,255,0.06);
+      transform: translateY(-4px);
+    }
+    .amenity-card:hover::before { opacity: 1; }
+
+    /* Gold shimmer animation */
+    .amenity-card::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -60%;
+      width: 40%;
+      height: 200%;
+      background: linear-gradient(105deg, transparent, rgba(201,168,76,0.15), transparent);
+      transition: left 0.6s ease;
+    }
+    .amenity-card:hover::after { left: 130%; }
+
+    .amenity-icon {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      display: block;
+    }
+    .amenity-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      color: var(--cream);
+      margin-bottom: 12px;
+    }
+    .amenity-desc {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    /* ============================================================
+       TESTIMONIALS
+    ============================================================ */
+    #testimonials {
+      padding: 120px 0;
+      background: var(--cream);
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 28px;
+      margin-top: 56px;
+    }
+
+    .testimonial-card {
+      background: var(--white);
+      border-radius: 4px;
+      padding: 36px 32px;
+      border-left: 3px solid var(--gold);
+      box-shadow: 0 4px 30px rgba(0,0,0,0.07);
+      transition: transform 0.3s, box-shadow 0.3s;
+      position: relative;
+    }
+    .testimonial-card::before {
+      content: '\201C';
+      font-family: 'Playfair Display', serif;
+      font-size: 5rem;
+      color: var(--gold);
+      opacity: 0.15;
+      position: absolute;
+      top: 10px;
+      left: 20px;
+      line-height: 1;
+    }
+    .testimonial-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 50px rgba(0,0,0,0.12);
+    }
+
+    .stars {
+      color: var(--gold);
+      font-size: 1rem;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+
+    .testimonial-text {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 1.02rem;
+      line-height: 1.8;
+      color: #444;
+      margin-bottom: 28px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .author-avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--cream);
+      flex-shrink: 0;
+    }
+
+    .author-name {
+      font-family: 'Jost', sans-serif;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--charcoal);
+    }
+    .author-city {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    /* ============================================================
+       GALLERY
+    ============================================================ */
+    #gallery {
+      padding: 120px 0;
+      background: var(--charcoal);
+    }
+    #gallery .section-title { color: var(--cream); }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 280px 220px;
+      gap: 16px;
+      margin-top: 56px;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+    .gallery-item:nth-child(1) { grid-column: span 2; }
+    .gallery-item:nth-child(4) { grid-column: span 2; }
+
+    .gallery-bg {
+      position: absolute;
+      inset: 0;
+      transition: transform 0.5s ease;
+    }
+    .gallery-item:hover .gallery-bg { transform: scale(1.08); }
+
+    .gallery-item:nth-child(1) .gallery-bg { background: linear-gradient(135deg, #1d3d1a, #2d5a27, #0a1a08); }
+    .gallery-item:nth-child(2) .gallery-bg { background: linear-gradient(135deg, #0d2b0a, #1a4015, #111); }
+    .gallery-item:nth-child(3) .gallery-bg { background: linear-gradient(135deg, #3d7535, #2d5a27, #1a1a1a); }
+    .gallery-item:nth-child(4) .gallery-bg { background: linear-gradient(135deg, #1a1a1a, #2d3d1a, #0d1a0a); }
+    .gallery-item:nth-child(5) .gallery-bg { background: linear-gradient(135deg, #0a1a08, #1d3d1a, #111); }
+    .gallery-item:nth-child(6) .gallery-bg { background: linear-gradient(135deg, #2d5a27, #1a3d18, #0a0a0a); }
+
+    .gallery-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, transparent 55%);
+      display: flex;
+      align-items: flex-end;
+      padding: 24px;
+      transition: background 0.4s;
+    }
+    .gallery-item:hover .gallery-overlay {
+      background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(201,168,76,0.1) 100%);
+      box-shadow: inset 0 0 0 2px var(--gold);
+    }
+
+    .gallery-label {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      color: var(--cream);
+      transition: color 0.3s;
+    }
+    .gallery-label small {
+      display: block;
+      font-family: 'Jost', sans-serif;
+      font-style: normal;
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 4px;
+    }
+    .gallery-icon {
+      font-size: 2.5rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -60%);
+      filter: drop-shadow(0 2px 8px rgba(0,0,0,0.6));
+    }
+
+    /* ============================================================
+       BOOKING / CTA
+    ============================================================ */
+    #booking {
+      padding: 120px 0;
+      background: linear-gradient(135deg, var(--forest-dark) 0%, #0e2410 50%, #111 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    #booking::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -20%;
+      width: 60%;
+      height: 200%;
+      background: radial-gradient(ellipse, rgba(201,168,76,0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    #booking .section-title { color: var(--cream); text-align: center; }
+    #booking .section-label { justify-content: center; margin-bottom: 14px; }
+
+    .booking-form-wrapper {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(201,168,76,0.2);
+      border-radius: 6px;
+      padding: 48px;
+      margin-top: 48px;
+      backdrop-filter: blur(10px);
+    }
+
+    .booking-form {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr auto;
+      gap: 16px;
+      align-items: end;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .form-label {
+      font-family: 'Jost', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    .form-input,
+    .form-select {
+      font-family: 'Jost', sans-serif;
+      font-size: 0.92rem;
+      color: var(--cream);
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(201,168,76,0.2);
+      border-radius: 3px;
+      padding: 14px 16px;
+      width: 100%;
+      transition: border-color 0.3s, box-shadow 0.3s, background 0.3s;
+      outline: none;
+      -webkit-appearance: none;
+    }
+    .form-input::-webkit-calendar-picker-indicator {
+      filter: invert(0.7);
+    }
+    .form-input:focus,
+    .form-select:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(201,168,76,0.15);
+      background: rgba(255,255,255,0.08);
+    }
+    .form-select option { background: var(--charcoal); color: var(--cream); }
+
+    .btn-check {
+      font-family: 'Jost', sans-serif;
+      font-weight: 700;
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--charcoal);
+      background: var(--gold);
+      padding: 14px 28px;
+      border-radius: 3px;
+      white-space: nowrap;
+      transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+    }
+    .btn-check:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(201,168,76,0.4);
+    }
+
+    .trust-badges {
+      display: flex;
+      justify-content: center;
+      gap: 48px;
+      flex-wrap: wrap;
+      margin-top: 48px;
+      padding-top: 40px;
+      border-top: 1px solid rgba(201,168,76,0.15);
+    }
+
+    .trust-badge {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .badge-icon {
+      width: 44px;
+      height: 44px;
+      border: 1px solid var(--gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+    .badge-text strong {
+      display: block;
+      font-family: 'Jost', sans-serif;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--cream);
+    }
+    .badge-text small {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    /* ============================================================
+       CONTACT
+    ============================================================ */
+    #contact {
+      padding: 120px 0;
+      background: var(--beige);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 80px;
+      margin-top: 56px;
+    }
+
+    .contact-info h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      color: var(--charcoal);
+      margin-bottom: 32px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+    .contact-icon {
+      width: 44px;
+      height: 44px;
+      background: linear-gradient(135deg, var(--forest-dark), var(--forest));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+    .contact-details strong {
+      display: block;
+      font-family: 'Jost', sans-serif;
+      font-weight: 600;
+      font-size: 0.82rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 4px;
+    }
+    .contact-details span {
+      font-size: 0.95rem;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .map-placeholder {
+      margin-top: 36px;
+      background: linear-gradient(135deg, var(--forest-dark), #0a1a08);
+      border-radius: 6px;
+      padding: 40px;
+      text-align: center;
+      border: 1px solid rgba(201,168,76,0.2);
+    }
+    .map-placeholder .map-icon { font-size: 3rem; margin-bottom: 12px; }
+    .map-placeholder p {
+      font-family: 'Jost', sans-serif;
+      font-size: 0.85rem;
+      color: rgba(253,248,240,0.6);
+    }
+    .map-placeholder strong {
+      display: block;
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 1rem;
+      color: var(--gold);
+      margin-bottom: 6px;
+    }
+
+    .contact-form-card {
+      background: var(--white);
+      border-radius: 6px;
+      padding: 48px;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.1);
+    }
+
+    .contact-form-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      color: var(--charcoal);
+      margin-bottom: 32px;
+    }
+
+    .contact-form .form-group {
+      margin-bottom: 20px;
+    }
+
+    .contact-form .form-label {
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+
+    .contact-input,
+    .contact-textarea {
+      width: 100%;
+      font-family: 'Jost', sans-serif;
+      font-size: 0.95rem;
+      color: var(--charcoal);
+      background: var(--beige);
+      border: 1px solid rgba(0,0,0,0.1);
+      border-radius: 3px;
+      padding: 14px 18px;
+      outline: none;
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+    .contact-input:focus,
+    .contact-textarea:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(201,168,76,0.12);
+    }
+    .contact-textarea { resize: vertical; min-height: 120px; }
+
+    .btn-send {
+      font-family: 'Jost', sans-serif;
+      font-weight: 700;
+      font-size: 0.82rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--cream);
+      background: linear-gradient(135deg, var(--forest), var(--forest-dark));
+      border: none;
+      padding: 16px 40px;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.3s;
+      width: 100%;
+    }
+    .btn-send:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(45,90,39,0.5);
+    }
+
+    /* ============================================================
+       FOOTER
+    ============================================================ */
+    #footer {
+      background: var(--charcoal);
+      padding: 80px 0 0;
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 48px;
+      padding-bottom: 56px;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+
+    .footer-brand .nav-logo {
+      font-size: 1.3rem;
+      margin-bottom: 16px;
+      display: block;
+    }
+    .footer-brand .tagline {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 0.95rem;
+      color: rgba(253,248,240,0.5);
+      margin-bottom: 24px;
+      line-height: 1.6;
+    }
+    .footer-brand p {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.35);
+      line-height: 1.7;
+    }
+
+    .footer-col h4 {
+      font-family: 'Jost', sans-serif;
+      font-weight: 600;
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 24px;
+    }
+    .footer-col ul li {
+      margin-bottom: 12px;
+    }
+    .footer-col ul a {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.5);
+      transition: color 0.3s;
+    }
+    .footer-col ul a:hover { color: var(--gold); }
+
+    .social-row {
+      display: flex;
+      gap: 12px;
+      margin-top: 28px;
+    }
+    .social-btn {
+      width: 38px;
+      height: 38px;
+      border: 1px solid rgba(201,168,76,0.25);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      color: rgba(255,255,255,0.5);
+      transition: border-color 0.3s, color 0.3s, background 0.3s;
+      cursor: pointer;
+    }
+    .social-btn:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+      background: rgba(201,168,76,0.08);
+    }
+
+    .footer-bottom {
+      padding: 24px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .footer-bottom p {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.3);
+    }
+    .footer-bottom .intern-credit {
+      font-size: 0.78rem;
+      color: rgba(201,168,76,0.5);
+    }
+
+    /* ============================================================
+       RESPONSIVE
+    ============================================================ */
+    @media (max-width: 1024px) {
+      .about-grid { grid-template-columns: 1fr; gap: 48px; }
+      .about-left { display: flex; gap: 32px; align-items: center; }
+      .est-text { font-size: 5rem; }
+      .about-image-block { flex: 1; }
+      .footer-top { grid-template-columns: 1fr 1fr; }
+      .booking-form { grid-template-columns: 1fr 1fr; }
+      .booking-form .btn-check { grid-column: span 2; width: 100%; }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links, .btn-book { display: none; }
+      .hamburger { display: flex; }
+      .mobile-menu { display: flex; }
+
+      .about-left { flex-direction: column; }
+      .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+      .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+      }
+      .gallery-item:nth-child(1),
+      .gallery-item:nth-child(4) { grid-column: span 1; }
+      .footer-top { grid-template-columns: 1fr; gap: 36px; }
+      .booking-form { grid-template-columns: 1fr; }
+      .booking-form .btn-check { grid-column: span 1; }
+      .booking-form-wrapper { padding: 28px; }
+      .trust-badges { gap: 24px; }
+    }
+
+    @media (max-width: 480px) {
+      .hero-buttons { flex-direction: column; }
+      .btn-primary, .btn-outline { width: 100%; max-width: 280px; text-align: center; }
+      .gallery-grid { grid-template-columns: 1fr; grid-template-rows: auto; }
+      .gallery-item { height: 200px; }
+      .about-stats { grid-template-columns: 1fr 1fr; }
+      .contact-form-card { padding: 28px; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ============================================================
+     NAVBAR
+============================================================ -->
+<nav id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">✦ VERDANA GRAND</a>
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#rooms">Rooms</a></li>
+        <li><a href="#amenities">Amenities</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="#booking" class="btn-book">Book Now</a>
+      <div class="hamburger" id="hamburger" aria-label="Menu" role="button" tabindex="0">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#hero">Home</a>
+      <a href="#rooms">Rooms</a>
+      <a href="#amenities">Amenities</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+      <a href="#booking" class="btn-book">Book Now</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ============================================================
+     HERO
+============================================================ -->
+<section id="hero">
+  <div class="hero-content">
+    <p class="hero-eyebrow">✦ Shimla, Himachal Pradesh</p>
+    <h1 class="hero-title">Experience<br>Luxury</h1>
+    <p class="hero-subtitle">Nestled in the heart of Shimla's pine forests</p>
+    <div class="hero-buttons">
+      <a href="#rooms" class="btn-primary">Explore Rooms</a>
+      <a href="#gallery" class="btn-outline">Virtual Tour</a>
+    </div>
+  </div>
+  <div class="scroll-arrow" aria-hidden="true">
+    <span></span><span></span><span></span>
+  </div>
+</section>
+
+<!-- ============================================================
+     ABOUT
+============================================================ -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-left reveal">
+        <div class="est-text">Est.<br>1998</div>
+        <div class="about-image-block">
+          <div class="about-image-inner">
+            <div class="big-icon">🌲</div>
+            <p>"A sanctuary above<br>the clouds"</p>
+          </div>
+        </div>
+      </div>
+      <div class="about-right">
+        <p class="section-label reveal">Our Heritage</p>
+        <h2 class="section-title reveal reveal-delay-1">A Legacy of<br><em>Timeless Elegance</em></h2>
+        <p class="reveal reveal-delay-2">
+          Verdana Grand Hotel &amp; Spa was born from a vision to create a sanctuary where the raw magnificence of the Himalayas meets the refined artistry of luxury hospitality. Established in 1998 by the Verdana family, our hotel has stood as a beacon of elegance in the colonial hills of Shimla for over two and a half decades.
+        </p>
+        <p class="reveal reveal-delay-3">
+          Every corridor tells a story. From hand-carved Himachali woodwork adorning our ceilings to the locally sourced organic produce gracing our fine-dining tables, every detail has been curated with intention. We believe luxury is not merely an experience — it is a philosophy.
+        </p>
+        <p class="reveal reveal-delay-4">
+          Our 120 rooms and suites are designed as private retreats, offering panoramic views of Jakhu Hill and the snow-dusted Himalayan ranges. Whether you seek the serenity of our award-winning spa, the thrill of mountain excursions, or the simple pleasure of afternoon tea on your private balcony — Verdana Grand is your home among the clouds.
+        </p>
+        <div class="about-stats reveal">
+          <div class="stat-item">
+            <div class="stat-number" data-target="25" data-suffix="+">0</div>
+            <div class="stat-label">Years of Excellence</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-target="120" data-suffix="">0</div>
+            <div class="stat-label">Luxury Rooms</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-target="4.9" data-suffix="★" data-decimal="1">0</div>
+            <div class="stat-label">Guest Rating</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     ROOMS
+============================================================ -->
+<section id="rooms">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-label reveal">Accommodations</p>
+      <h2 class="section-title reveal reveal-delay-1">Our Suites &amp; Rooms</h2>
+      <div class="gold-divider"></div>
+      <p class="reveal reveal-delay-2" style="color:#666; max-width:520px; margin:0 auto; font-size:0.95rem; line-height:1.8;">
+        Each room is a private universe of calm — designed where the grandeur of the mountains becomes your personal backdrop.
+      </p>
+    </div>
+    <div class="rooms-grid">
+
+      <div class="room-card reveal">
+        <div class="room-card-visual">
+          <span style="position:relative;z-index:1;">🛏️</span>
+          <span class="room-badge">Popular</span>
+        </div>
+        <div class="room-card-body">
+          <h3 class="room-name">Deluxe Room</h3>
+          <div class="room-price">₹8,500 <span>/ night</span></div>
+          <div class="room-divider"></div>
+          <div class="room-amenities">
+            <div class="room-amenity"><span class="icon">📶</span> Free WiFi</div>
+            <div class="room-amenity"><span class="icon">❄️</span> Climate Control</div>
+            <div class="room-amenity"><span class="icon">📺</span> Smart TV</div>
+            <div class="room-amenity"><span class="icon">🍳</span> Breakfast</div>
+          </div>
+          <a href="#booking" class="btn-room">Book This Room</a>
+        </div>
+      </div>
+
+      <div class="room-card reveal reveal-delay-1">
+        <div class="room-card-visual">
+          <span style="position:relative;z-index:1;">🛋️</span>
+          <span class="room-badge">Best Value</span>
+        </div>
+        <div class="room-card-body">
+          <h3 class="room-name">Premium Suite</h3>
+          <div class="room-price">₹15,000 <span>/ night</span></div>
+          <div class="room-divider"></div>
+          <div class="room-amenities">
+            <div class="room-amenity"><span class="icon">📶</span> Free WiFi</div>
+            <div class="room-amenity"><span class="icon">❄️</span> Climate Control</div>
+            <div class="room-amenity"><span class="icon">📺</span> Smart TV</div>
+            <div class="room-amenity"><span class="icon">🍳</span> Breakfast</div>
+          </div>
+          <a href="#booking" class="btn-room">Book This Room</a>
+        </div>
+      </div>
+
+      <div class="room-card reveal reveal-delay-2">
+        <div class="room-card-visual">
+          <span style="position:relative;z-index:1;">👑</span>
+          <span class="room-badge" style="background:var(--gold-light);">Exclusive</span>
+        </div>
+        <div class="room-card-body">
+          <h3 class="room-name">Royal Penthouse</h3>
+          <div class="room-price">₹32,000 <span>/ night</span></div>
+          <div class="room-divider"></div>
+          <div class="room-amenities">
+            <div class="room-amenity"><span class="icon">📶</span> Free WiFi</div>
+            <div class="room-amenity"><span class="icon">❄️</span> Climate Control</div>
+            <div class="room-amenity"><span class="icon">📺</span> Smart TV</div>
+            <div class="room-amenity"><span class="icon">🍳</span> Breakfast</div>
+          </div>
+          <a href="#booking" class="btn-room">Book This Room</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     AMENITIES
+============================================================ -->
+<section id="amenities">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-label reveal" style="justify-content:center;">World-Class Facilities</p>
+      <h2 class="section-title reveal reveal-delay-1" style="color:var(--cream);">Hotel Amenities</h2>
+      <div class="gold-divider"></div>
+    </div>
+    <div class="amenities-grid">
+
+      <div class="amenity-card reveal">
+        <span class="amenity-icon">🏊</span>
+        <div class="amenity-name">Swimming Pool</div>
+        <p class="amenity-desc">Infinity pool overlooking the Himalayan valley — heated year-round with private cabanas.</p>
+      </div>
+
+      <div class="amenity-card reveal reveal-delay-1">
+        <span class="amenity-icon">🧖</span>
+        <div class="amenity-name">Luxury Spa</div>
+        <p class="amenity-desc">Award-winning therapies rooted in ancient Ayurveda and modern wellness sciences.</p>
+      </div>
+
+      <div class="amenity-card reveal reveal-delay-2">
+        <span class="amenity-icon">🍽️</span>
+        <div class="amenity-name">Fine Dining</div>
+        <p class="amenity-desc">Four signature restaurants serving global cuisine with locally-sourced Himalayan ingredients.</p>
+      </div>
+
+      <div class="amenity-card reveal reveal-delay-3">
+        <span class="amenity-icon">🏋️</span>
+        <div class="amenity-name">Fitness Center</div>
+        <p class="amenity-desc">State-of-the-art gym with panoramic mountain views — open 24 hours for our guests.</p>
+      </div>
+
+      <div class="amenity-card reveal reveal-delay-4">
+        <span class="amenity-icon">🚗</span>
+        <div class="amenity-name">Valet Parking</div>
+        <p class="amenity-desc">Complimentary valet service with secure underground parking for all our distinguished guests.</p>
+      </div>
+
+      <div class="amenity-card reveal">
+        <span class="amenity-icon">🎭</span>
+        <div class="amenity-name">Event Hall</div>
+        <p class="amenity-desc">Grand ballroom and curated event spaces for weddings, conferences, and private celebrations.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     TESTIMONIALS
+============================================================ -->
+<section id="testimonials">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-label reveal">Guest Experiences</p>
+      <h2 class="section-title reveal reveal-delay-1">What Our Guests Say</h2>
+      <div class="gold-divider"></div>
+    </div>
+    <div class="testimonials-grid">
+
+      <div class="testimonial-card reveal">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"Verdana Grand is nothing short of extraordinary. The Royal Penthouse suite left me breathless — waking up to the Himalayan sunrise with a steaming cup of Darjeeling tea on my private terrace was genuinely life-changing."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar" style="background: linear-gradient(135deg,#2d5a27,#1a3d18);">R</div>
+          <div>
+            <div class="author-name">Radhika Mehta</div>
+            <div class="author-city">Mumbai, Maharashtra</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card reveal reveal-delay-1">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"The spa experience here redefined relaxation for me. The Himalayan stone therapy combined with forest views — I have traveled across 30 countries and this is among the finest wellness retreats I have encountered."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar" style="background: linear-gradient(135deg,#c9a84c,#a8852e);">A</div>
+          <div>
+            <div class="author-name">Arjun Singhania</div>
+            <div class="author-city">New Delhi, India</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card reveal reveal-delay-2">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"We celebrated our anniversary here and the attention to detail was impeccable. The staff remembered our preferences from day one — personalized menus, surprise floral arrangements. Pure, understated luxury."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar" style="background: linear-gradient(135deg,#1a1a1a,#3d3d3d);">P</div>
+          <div>
+            <div class="author-name">Priya &amp; Karan Ahluwalia</div>
+            <div class="author-city">Chandigarh, Punjab</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     GALLERY
+============================================================ -->
+<section id="gallery">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-label reveal" style="justify-content:center;">Visual Journey</p>
+      <h2 class="section-title reveal reveal-delay-1" style="color:var(--cream);">Our Gallery</h2>
+      <div class="gold-divider"></div>
+    </div>
+    <div class="gallery-grid">
+
+      <div class="gallery-item reveal">
+        <div class="gallery-bg"></div>
+        <span class="gallery-icon">🏨</span>
+        <div class="gallery-overlay">
+          <div class="gallery-label">
+            <small>Grand Entrance</small>
+            The Lobby
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-item reveal reveal-delay-1">
+        <div class="gallery-bg"></div>
+        <span class="gallery-icon">🏊</span>
+        <div class="gallery-overlay">
+          <div class="gallery-label">
+            <small>Infinity Edge</small>
+            The Pool
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-item reveal reveal-delay-2">
+        <div class="gallery-bg"></div>
+        <span class="gallery-icon">🍽️</span>
+        <div class="gallery-overlay">
+          <div class="gallery-label">
+            <small>Culinary Excellence</small>
+            Restaurant
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-item reveal reveal-delay-3">
+        <div class="gallery-bg"></div>
+        <span class="gallery-icon">🛏️</span>
+        <div class="gallery-overlay">
+          <div class="gallery-label">
+            <small>Private Retreat</small>
+            Penthouse Suite
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-item reveal reveal-delay-4">
+        <div class="gallery-bg"></div>
+        <span class="gallery-icon">🧖</span>
+        <div class="gallery-overlay">
+          <div class="gallery-label">
+            <small>Rejuvenation</small>
+            The Spa
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-item reveal">
+        <div class="gallery-bg"></div>
+        <span class="gallery-icon">🌄</span>
+        <div class="gallery-overlay">
+          <div class="gallery-label">
+            <small>Nature's Canvas</small>
+            Mountain View
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     BOOKING / CTA
+============================================================ -->
+<section id="booking">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-label reveal" style="justify-content:center;">Plan Your Stay</p>
+      <h2 class="section-title reveal reveal-delay-1">Reserve Your Stay</h2>
+      <div class="gold-divider"></div>
+      <p class="reveal reveal-delay-2" style="color:rgba(253,248,240,0.6); max-width:480px; margin:0 auto; font-size:0.95rem; line-height:1.8; text-align:center;">
+        Begin your journey to Verdana Grand — where every stay is a curated narrative of indulgence.
+      </p>
+    </div>
+    <div class="booking-form-wrapper reveal">
+      <form class="booking-form" onsubmit="return handleBooking(event)">
+        <div class="form-group">
+          <label class="form-label">Check-In</label>
+          <input type="date" class="form-input" id="checkin" required />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Check-Out</label>
+          <input type="date" class="form-input" id="checkout" required />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Guests</label>
+          <select class="form-select" id="guests">
+            <option value="1">1 Guest</option>
+            <option value="2" selected>2 Guests</option>
+            <option value="3">3 Guests</option>
+            <option value="4">4 Guests</option>
+            <option value="5">5+ Guests</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Room Type</label>
+          <select class="form-select" id="roomtype">
+            <option value="">Any Room</option>
+            <option value="deluxe">Deluxe Room</option>
+            <option value="premium">Premium Suite</option>
+            <option value="royal">Royal Penthouse</option>
+          </select>
+        </div>
+        <button type="submit" class="btn-check">Check Availability</button>
+      </form>
+    </div>
+    <div class="trust-badges reveal">
+      <div class="trust-badge">
+        <div class="badge-icon">✓</div>
+        <div class="badge-text">
+          <strong>Free Cancellation</strong>
+          <small>Up to 48 hours before check-in</small>
+        </div>
+      </div>
+      <div class="trust-badge">
+        <div class="badge-icon">₹</div>
+        <div class="badge-text">
+          <strong>Best Price Guarantee</strong>
+          <small>We match any lower rate found</small>
+        </div>
+      </div>
+      <div class="trust-badge">
+        <div class="badge-icon">🕐</div>
+        <div class="badge-text">
+          <strong>24/7 Support</strong>
+          <small>Concierge available round the clock</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CONTACT
+============================================================ -->
+<section id="contact">
+  <div class="container">
+    <div class="section-header" style="text-align:left;">
+      <p class="section-label reveal">Get in Touch</p>
+      <h2 class="section-title reveal reveal-delay-1">Contact Us</h2>
+      <div class="gold-divider" style="margin:16px 0;"></div>
+    </div>
+    <div class="contact-grid">
+
+      <div class="contact-info reveal">
+        <h3>We'd love to hear from you</h3>
+
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div class="contact-details">
+            <strong>Address</strong>
+            <span>Verdana Grand Hotel &amp; Spa<br>The Ridge, Shimla — 171001<br>Himachal Pradesh, India</span>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">📞</div>
+          <div class="contact-details">
+            <strong>Phone</strong>
+            <span>+91 177 265 0000<br>+91 98765 43210</span>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">✉️</div>
+          <div class="contact-details">
+            <strong>Email</strong>
+            <span>reservations@verdanagrand.com<br>info@verdanagrand.com</span>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">🕐</div>
+          <div class="contact-details">
+            <strong>Concierge Hours</strong>
+            <span>Open 24 Hours · 7 Days a Week<br>Check-in: 2:00 PM · Check-out: 12:00 PM</span>
+          </div>
+        </div>
+
+        <div class="map-placeholder">
+          <div class="map-icon">🗺️</div>
+          <strong>Verdana Grand Hotel &amp; Spa</strong>
+          <p>The Ridge, Shimla, Himachal Pradesh<br>Altitude: 2,205 m above sea level</p>
+        </div>
+      </div>
+
+      <div class="contact-form-card reveal reveal-delay-1">
+        <h3>Send a Message</h3>
+        <form class="contact-form" onsubmit="return handleContact(event)">
+          <div class="form-group">
+            <label class="form-label">Full Name</label>
+            <input type="text" class="contact-input" placeholder="Your full name" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Email Address</label>
+            <input type="email" class="contact-input" placeholder="your@email.com" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Message</label>
+            <textarea class="contact-textarea" placeholder="How can we assist you?"></textarea>
+          </div>
+          <button type="submit" class="btn-send">Send Message</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FOOTER
+============================================================ -->
+<footer id="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="nav-logo">✦ VERDANA GRAND</span>
+        <p class="tagline">"Where Nature Meets Luxury"</p>
+        <p>A sanctuary above the clouds — where the magnificence of the Himalayas and the refinement of luxury hospitality become one unforgettable experience.</p>
+        <div class="social-row">
+          <div class="social-btn" title="Facebook">f</div>
+          <div class="social-btn" title="Instagram">📷</div>
+          <div class="social-btn" title="Twitter">𝕏</div>
+          <div class="social-btn" title="TripAdvisor">🧳</div>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#rooms">Rooms &amp; Suites</a></li>
+          <li><a href="#amenities">Amenities</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#booking">Reservations</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Amenities</h4>
+        <ul>
+          <li><a href="#amenities">Swimming Pool</a></li>
+          <li><a href="#amenities">Luxury Spa</a></li>
+          <li><a href="#amenities">Fine Dining</a></li>
+          <li><a href="#amenities">Fitness Center</a></li>
+          <li><a href="#amenities">Valet Parking</a></li>
+          <li><a href="#amenities">Event Hall</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+911772650000">+91 177 265 0000</a></li>
+          <li><a href="mailto:reservations@verdanagrand.com">reservations@verdanagrand.com</a></li>
+          <li><a href="#contact">The Ridge, Shimla</a></li>
+          <li><a href="#contact">Himachal Pradesh, India</a></li>
+          <li><a href="#contact">PIN: 171001</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 Verdana Grand Hotel &amp; Spa · Shimla, India. All rights reserved.</p>
+      <p class="intern-credit">Built for Future Interns Internship Program — Task 3</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================================
+     JAVASCRIPT
+============================================================ -->
+<script>
+  /* ---- Navbar scroll ---- */
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  /* ---- Hamburger menu ---- */
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  hamburger.addEventListener('click', toggleMenu);
+  hamburger.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') toggleMenu(); });
+
+  function toggleMenu() {
+    hamburger.classList.toggle('open');
+    mobileMenu.classList.toggle('open');
+  }
+
+  // Close mobile menu on link click
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('open');
+      mobileMenu.classList.remove('open');
+    });
+  });
+
+  /* ---- Smooth scroll for all anchor links ---- */
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        const offset = 80;
+        const top = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }
+    });
+  });
+
+  /* ---- Hero parallax ---- */
+  const hero = document.getElementById('hero');
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    if (scrollY < window.innerHeight) {
+      hero.style.setProperty('--parallax', scrollY * 0.4 + 'px');
+    }
+  });
+  // Apply parallax via CSS custom property
+  const styleTag = document.createElement('style');
+  styleTag.textContent = `#hero::before { transform: translateY(var(--parallax, 0)); }`;
+  document.head.appendChild(styleTag);
+
+  /* ---- Scroll Reveal (IntersectionObserver) ---- */
+  const revealEls = document.querySelectorAll('.reveal');
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  revealEls.forEach(el => revealObserver.observe(el));
+
+  /* ---- Counter animation ---- */
+  function animateCounter(el) {
+    const target = parseFloat(el.dataset.target);
+    const suffix = el.dataset.suffix || '';
+    const decimals = parseInt(el.dataset.decimal || '0');
+    const duration = 1800;
+    const start = performance.now();
+
+    function update(now) {
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      // Ease out cubic
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const current = eased * target;
+      el.textContent = current.toFixed(decimals) + suffix;
+      if (progress < 1) requestAnimationFrame(update);
+    }
+    requestAnimationFrame(update);
+  }
+
+  const counterEls = document.querySelectorAll('.stat-number');
+  const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateCounter(entry.target);
+        counterObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  counterEls.forEach(el => counterObserver.observe(el));
+
+  /* ---- Booking form handler ---- */
+  function handleBooking(e) {
+    e.preventDefault();
+    const checkin = document.getElementById('checkin').value;
+    const checkout = document.getElementById('checkout').value;
+    const guests = document.getElementById('guests').value;
+    const roomtype = document.getElementById('roomtype').value;
+
+    if (checkin && checkout && new Date(checkin) >= new Date(checkout)) {
+      alert('Check-out date must be after check-in date.');
+      return false;
+    }
+
+    const btn = e.target.querySelector('.btn-check');
+    const originalText = btn.textContent;
+    btn.textContent = '✓ Checking…';
+    btn.style.opacity = '0.75';
+
+    setTimeout(() => {
+      btn.textContent = '✓ Available! Contact Us';
+      btn.style.opacity = '1';
+      btn.style.background = 'var(--forest-light)';
+      btn.style.color = 'var(--cream)';
+      setTimeout(() => {
+        btn.textContent = originalText;
+        btn.style.background = '';
+        btn.style.color = '';
+      }, 3500);
+    }, 1400);
+
+    return false;
+  }
+
+  /* ---- Contact form handler ---- */
+  function handleContact(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('.btn-send');
+    const originalText = btn.textContent;
+    btn.textContent = 'Sending…';
+    btn.disabled = true;
+
+    setTimeout(() => {
+      btn.textContent = '✓ Message Sent!';
+      btn.style.background = 'linear-gradient(135deg, var(--gold-dark), var(--gold))';
+      setTimeout(() => {
+        btn.textContent = originalText;
+        btn.style.background = '';
+        btn.disabled = false;
+        e.target.reset();
+      }, 3000);
+    }, 1200);
+
+    return false;
+  }
+
+  /* ---- Set min date for booking inputs ---- */
+  (function() {
+    const today = new Date().toISOString().split('T')[0];
+    const tomorrow = new Date(Date.now() + 86400000).toISOString().split('T')[0];
+    const ci = document.getElementById('checkin');
+    const co = document.getElementById('checkout');
+    if (ci) { ci.min = today; ci.value = today; }
+    if (co) { co.min = tomorrow; co.value = tomorrow; }
+
+    if (ci && co) {
+      ci.addEventListener('change', () => {
+        const nextDay = new Date(ci.value);
+        nextDay.setDate(nextDay.getDate() + 1);
+        co.min = nextDay.toISOString().split('T')[0];
+        if (co.value <= ci.value) {
+          co.value = nextDay.toISOString().split('T')[0];
+        }
+      });
+    }
+  })();
+</script>
+
+</body>
+</html>
